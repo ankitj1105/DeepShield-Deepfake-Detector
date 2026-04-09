@@ -140,20 +140,79 @@ Upload image → get result
 
 ---
 
-## 🧩 Chrome Extension Setup
+## 🧩 Chrome Extension Setup (DeepShield)
 
-1. Open Chrome
-2. Go to:
+Follow these steps to use the DeepShield extension:
+
+### 📥 Step 1: Download the Extension
+
+After cloning the repo, navigate to:
+
+```
+extension/
+```
+
+---
+
+### ⚙️ Step 2: Open Chrome Extensions
+
+Go to:
 
 ```
 chrome://extensions/
 ```
 
-3. Enable **Developer Mode**
-4. Click **Load unpacked**
-5. Select `extension/` folder
+---
+
+### 🔧 Step 3: Enable Developer Mode
+
+* Toggle **Developer Mode** (top right)
 
 ---
+
+### 📦 Step 4: Load Extension
+
+* Click **Load unpacked**
+* Select the `extension/` folder from this project
+
+---
+
+### ▶️ Step 5: Start Backend
+
+Make sure backend is running:
+
+```
+python app.py
+```
+
+---
+
+### 🌐 Step 6: Use on Instagram
+
+* Open Instagram in Chrome
+
+* Scroll posts
+
+* You will see:
+
+* 🔴 AI GENERATED
+
+* 🟡 FILTERED
+
+* 🟢 REAL
+
+displayed on images automatically
+
+---
+
+### ⚠️ Important Notes
+
+* Backend must be running (`http://127.0.0.1:5000`)
+* Extension works only on Chrome (Developer Mode)
+* If nothing appears → reload extension
+
+---
+
 
 ## 📸 How It Works
 
