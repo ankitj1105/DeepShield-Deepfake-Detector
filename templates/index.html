@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>DeepShield AI</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+
+<div class="layout">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <h2>🛡 DS AI</h2>
+        <div class="menu">
+            <div class="item active">Dashboard</div>
+            <div class="item">Scan</div>
+            <div class="item">Reports</div>
+            <div class="item">Settings</div>
+        </div>
+    </div>
+
+    <!-- MAIN -->
+    <div class="main">
+
+        <h1>Deepfake Detection Dashboard</h1>
+
+        <!-- UPLOAD -->
+        <div class="card upload-card" id="dropArea">
+            <p>Drop Images Here</p>
+            <input type="file" id="fileInput" multiple hidden>
+            <button onclick="openFile()">Select Files</button>
+        </div>
+
+        <!-- DASHBOARD PANEL -->
+        <div class="card stats">
+            <h3>System Stats</h3>
+            <p>Real: <span id="realCount">0</span></p>
+            <p>Fake: <span id="fakeCount">0</span></p>
+            <p>Filtered: <span id="filteredCount">0</span></p>
+        </div>
+
+        <!-- CHART -->
+        <div class="card chart-box">
+            <canvas id="chart"></canvas>
+        </div>
+
+        <!-- PREVIEW -->
+        <div id="previewContainer" class="preview-grid"></div>
+
+        <!-- RESULTS -->
+        <div id="results"></div>
+
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
